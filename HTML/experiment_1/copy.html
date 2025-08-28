@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,10 +7,28 @@
     <title>Document</title>
 
     <style>
+        table {
+            border-collapse: separate;
+            width: 100%;
+            text-align: center;
+        }
         th,
         td {
+            border: 1px solid black;
             padding: 10px;
 
+        }
+        th{
+            background-color: #eee7e7;
+        }
+        .green {
+            background-color: #0eeb3a;
+        }
+        .yellow {
+            background-color: #f8ba00;
+        }
+        .brown {
+            background-color: #fce4d6;
         }
     </style>
 </head>
@@ -65,10 +83,10 @@
             <tr>
                 <th>Monday</th>
                 <td>BCSC1003<br>ABVIII-425<br></td>
-                <td>PCPH0001 <br>ABVIII-425<br></td>
+                <td class="green">PCPH0001 <br>ABVIII-425<br></td>
                 <td>BCSC1010<br>ABVIII-425<br></td>
                 <td></td>
-                <td>2AA+FH(LE) <br>ABVI-311<br></td>
+                <td class="yellow">2AA+FH(LE) <br>ABVI-311<br></td>
                 <td>BELH0020<br>ABVIII-425<br></td>
                 <td>BCSC0813<br>ABVIII-425<br></td>
                 <td>BCSC0813<br>ABVIII-425<br></td>
@@ -80,23 +98,24 @@
                 <td>PCPH0001<br>ABVIII-425<br></td>
                 <td>BCSC1002<br>ABVIII-425<br></td>
                 <td>BCSC1010<br>ABVIII-425<br></td>
-                <td>BCSC1005<br>ABVIII-425<br></td>
+                <td class="green">BCSC1005<br>ABVIII-425<br></td>
                 <td></td>
-                <td>BELH0009<br>ABVI-302<br></td>
-                <td>BCSC0031<br>ABVIII-425<br></td>
-                <td>BCSC1003<br>ABVIII-425<br></td>
-                <td>2AA+FH(LE)<br>ABVI-311<br></td>
+                <td class="green">BELH0009<br>ABVI-302<br></td>
+                <td class="green">BCSC0031<br>ABVIII-425<br></td>
+                <td class="green">BCSC1003<br>ABVIII-425<br></td>
+                <td class="yellow">2AA+FH(LE)<br>ABVI-311<br></td>
                 <td></td>
             </tr>
             <TR>
                 <th>Wednesday</th>
                 <td colspan="2">BCSC0801<br>ABVIII-425<br></td>
-                <td colspan="2">2FH(LE)1/BCSC0804<br>ABII-5002<br>2FH(LE)2/BCSC0804<br>ABII-5004</br><br>2FH(LE)3/BCSC0804<br>ABII-5005</br>
+                <td colspan="2">2FH(LE)1/BCSC0804<br>ABII-5002<br><hr>2FH(LE)2/BCSC0804<br>ABII-5004<br><hr>2FH(LE)3/BCSC0804<br>ABII-5005</td>
                 <td></td>
-                <td colspan="2">2FH(LE)1/BELHB1010<br>ABVIII-425</td><br>2FH(LE)2/BCSC0802/ABI-329</br>
+                <td colspan="0">2FH1/BCSC1010<br>ABIII-425<br><hr rowspan="2">2FH(LE)1/BELHB1010<br>ABVIII-425</td>
                 <td></td>
-                <td>2FH(LE)2/BELHB020<br>ABVIII-431</td>
+                <td>2FH(LE)2/BELHB020<br>ABVIII-431 <br> <hr>2FH(LE)2/BELHB0020<br>ABVIII-425</td>
                 <td></td>
+                <td class="yellow">2AA+FH(LE)<br>ABVI-311</td>
 
             </TR>
             <tr>
@@ -104,13 +123,25 @@
                 <td>BCSC0031<br>ABVII-425</td>
                 <td>BCSC1002<br>ABVII-425</td>
                 <td>BCSC1005<br>ABVII-425</td>
-                <td>BCSC1009<br>ABVII-425</td>
+                <td class="green">BCSC0009<br>ABVI-306</td>
                 <td></td>
-                <td>2FH(LE)1/BELH1020<br>ABVII-425 <br>2FH(LE)2/BELH1020<br>ABVII-409</br></td>
-                <td>2FH(LE)/BCSC0802<br>ABVI-323</td>
+                <td>2FH(LE)1/BELH1020<br>ABVII-425 <br><HR></HR>2FH(LE)2/BELH1020<br>ABVII-409</br></td>
+                <td class="yellow">2FH(LE)I/BCSC0802<br>ABVI-323 <br><hr>2FH2/BCSC1010<br>ABVI-425</td>
                 <td></td>
                 <td></td>
             </tr>
+            <tr>
+                <th>Friday</th>
+                <td>BELH0020<br>ABVIII-425<br></td>
+                <td class="green">BCSC1003<br>ABVIII-425<br></td>
+                <td>BCSC1010<br>ABVIII-425<br></td>
+                <td class="green">BCSC0009<br>ABVI-425<br></td>
+                <td><br></td>
+                <td>BCSC0031<br>ABVIII-425<br></td>
+                <td class="green">BCSC1005<br>ABVIII-425<br></td>
+                <td class="green">BCSC1002<br>ABVIII-425<br></td>
+                <td class="yellow">2AA+FH(LE)<br>ABVI-311<br></td>
+                <td></td>
 
         </thead>
     </table>
@@ -119,4 +150,4 @@
 
 </html>
 
-</html> -->
+</html>
