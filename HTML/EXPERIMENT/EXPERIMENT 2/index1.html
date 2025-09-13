@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Future Landing Page</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+ 
+  <header>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712100.png" alt="AI Logo">
+      <span>AI Future</span>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#cta">Get Started</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2 class="reveal">Artificial Intelligence for a Smarter World</h2>
+      <p class="reveal">Revolutionizing industries with AI-powered solutions in automation, healthcare, fintech, and beyond.</p>
+     
+    </div>
+  </section>
+
+ 
+  <div class="about reveal" id="about">
+    <h2>About Us</h2>
+    <p>We specialize in creating cutting-edge AI applications using Machine Learning, Deep Learning, and Natural Language Processing. 
+    Our solutions empower businesses to automate tasks, analyze data, and make intelligent decisions.</p>
+    </div>
+
+ 
+  <section class="features" id="features">
+    <h2 class="reveal">Our Features</h2>
+    <div class="feature-container">
+      <div class="feature-card reveal">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png" alt="ML">
+        <h3>Machine Learning</h3>
+        <p>Train models that evolve and improve with experience.</p>
+      </div>
+      <div class="feature-card reveal">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712100.png" alt="NLP">
+        <h3>Natural Language</h3>
+        <p>Understand and process human language seamlessly.</p>
+      </div>
+      <div class="feature-card reveal">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712060.png" alt="Automation">
+        <h3>Automation</h3>
+        <p>Streamline workflows with AI-driven automation.</p>
+      </div>
+      <div class="feature-card reveal">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712127.png" alt="Vision">
+        <h3>Computer Vision</h3>
+        <p>Recognize objects, faces, and patterns with precision.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="cta reveal" id="cta">
+    <h2>Ready to Shape the Future?</h2>
+    <p>Join us in building smarter, faster, and more intelligent solutions powered by AI.</p>
+    <a href="#contact" class="btn">Get Started</a>
+  </section>
+
+ 
+  <section class="contact reveal" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required><br>
+      <input type="email" placeholder="Your Email" required><br>
+      <textarea rows="5" placeholder="Your Message"></textarea><br>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+ 
+  <footer>
+    <p>© 2025 AI Future. All Rights Reserved.</p>
+  </footer>
+
+
+  <script>
+    const reveals = document.querySelectorAll(".reveal");
+
+    function revealOnScroll() {
+      const windowHeight = window.innerHeight;
+      reveals.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) {
+          el.classList.add("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+  </script>
+</body>
+</html>

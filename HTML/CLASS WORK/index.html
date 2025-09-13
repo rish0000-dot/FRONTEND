@@ -4,13 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        
+ .container {
+  display: flex;
+  flex-direction: row;
+  
+  flex-wrap: wrap;
+  border: 2px solid #333;
+  margin: 20px;
+  height: 200px; /* useful for vertical alignment demos */
+  justify-content: end;
+  align-items: baseline;
+  align-content: space-around;
+  gap: 30px;
+ }
+
+
+.item {
+  background: lightblue;
+  border: 1px solid #333;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  width: 300px;
+}
+.item:nth-child(2) {
+  /* order: 1; */
+  /* flex-grow: 1; */
+  flex-shrink: 2;
+}
+.item:nth-child(3) {
+  /* order: 2; */
+}
+
+
+
+
+    </style>
 </head>
 <body>
-    <div>
-        <div style="width: 400px; height: 400px">
-
-        </div>
-    </div>
     
 </body>
 </html>
+<div class="container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+</div>
+

@@ -1,12 +1,12 @@
 :root {
-  --ink: #1e293b; /* primary text */
-  --muted: #64748b; /* secondary text */
-  --bg: #f6f7fb; /* page bg */
+  --ink: #ffffff; /* primary text */
+  --muted: #ffffff; /* secondary text */
+  --bg: #0029cccb; /* page bg */
   --card: #ffffff; /* card bg */
-  --line: #96afe7; /* separators */
-  --brand: #3d6896; /* royal blue */
-  --accent: #8b5cf6; /* soft violet */
-  --gold: #ffcd2b; 
+  --line: #0051ff; /* separators */
+  --brand: #b2cc21; /* royal blue */
+  --accent: #533b8f; /* soft violet */
+  --gold: #fcc100; 
 }
 
 body {
@@ -17,27 +17,39 @@ body {
   line-height: 1.6;
 }
 h1, h2, h3{
-  font-family: "Playfair Display", serif;
-  margin: 0 0 0.6rem;
+  .bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  margin: 200px;
+  
 }
 
+}
+
+
 p {
+
   margin: 0.4rem 0 1rem;
   color: var(--muted);
 }
 
 ::selection {
   background: var(--accent);
-  color: white;
+  color: rgb(255, 243, 243);
 }
 
 #about-header {
   position: relative;
-  padding: 96px 24px 120px;
-  text-align: center;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 150px 80px;
   color: #fff;
-  background: linear-gradient(90deg, #47c3d3 0%, #248491 100%);
-  overflow: hidden;
+  background: url(https://www.future-processing.com/blog/wp-content/uploads/2023/01/How-artificial-intelligence-will-change-the-future.jpg) no-repeat center/cover ;
+ overflow: hidden;
+  
 }
 
 #about-header::after {
@@ -48,21 +60,24 @@ p {
   bottom: 48px;
   width: 120px;
   height: 3px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  background: linear-gradient(900deg,  var(--gold), );
   border-radius: 999px;
 }
 
 #about-header h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   letter-spacing: 0.7px;
+  margin-bottom: 20px;
   color: #fff;
 }
 
 #about-header p {
+ 
   max-width: 780px;
-  margin: 0.75rem auto 0;
+  margin: 0;
   color: #e6e8ff;
   opacity: 1;
+  text-align: left;
 }
 .container {
   max-width: 1120px;
@@ -71,12 +86,15 @@ p {
 }
 
 .card {
-  background-color: #64748b;
+  background: url(https://t4.ftcdn.net/jpg/04/17/96/25/360_F_417962579_Ury0fdIal2v4DsMDPHwzMoFMwK9554cP.jpg)no-repeat center/cover;
+ display: grid;
   border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
-  border: 1px solid var(--line);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid black;
   
 }
+
 
 .section {
   margin: 28px 0 40px;
@@ -84,11 +102,11 @@ p {
 }
 
 .section-title {
-  display: inline-block;
-  font-size: 1.4rem;
+  display: inlin-block;
+  font-size: 2rem;
   color: var(--ink);
   position: relative;
-  padding-bottom: 8px;
+  padding-bottom: 4px;
 }
 
 .section-title::after {
@@ -117,15 +135,15 @@ a[target="_blank"] {
   text-decoration: none;
   border-bottom: 1px solid rgba(43, 108, 176, 0.3);
 }
-/* External link arrow via pseudo-element */
+/*External link arrow via pseudo-element 
 a[target="_blank"]::after {
   content: " ↗";
   font-weight: 600;
-}
+}*/
 a[target="_blank"]:hover {
   color: #1d4ed8;
   border-color: #1d4ed8;
-}
+} 
 
 ul.values {
   padding-left: 4rem;
@@ -138,6 +156,7 @@ ul.values li::marker {
   color: var(--accent);
 }
 
+
 .team {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -149,7 +168,7 @@ ul.values li::marker {
   position: relative;
   padding: 26px 22px 22px;
   border-radius: 16px;
-  background: linear-gradient(180deg, #b1dd10, #fbfbfe);
+  background: linear-gradient(180deg, #3c7c99, #000000);
   border: 1px solid var(--line);
   transition: transform 0.35s ease, box-shadow 0.35s ease,
     border-color 0.35s ease;
@@ -169,7 +188,7 @@ ul.values li::marker {
   border-top-right-radius: 14px;
 }
 /* Role badge via attribute selector + pseudo-element */
-.member[data-role="ceo"]::after {
+/* .member[data-role="ceo"]::after {
   content: " CEO ";
   position: absolute;
   top: 12px;
@@ -181,12 +200,12 @@ ul.values li::marker {
   padding: 4px 8px;
   border-radius: 999px;
   border: 1px solid rgba(0, 0, 0, 0.08);
-}
+} */
 
 .member:hover {
   transform: translateY(-8px);
-  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
-  border-color: #dfe6fb;
+  box-shadow: 0 16px 36px rgba(28, 77, 192, 0.12);
+  border-color: #254dc4;
 }
 .member img {
   width: 88px;
@@ -206,14 +225,14 @@ ul.values li::marker {
 
 /* Subtle alternation (pseudo-class) */
 .member:nth-child(odd) {
-  background: linear-gradient(180deg, #0ae7ca, #fff);
+  background: linear-gradient(180deg, #000000, #3c7c99);
 }
 
 /* ---------- Quote ---------- */
 blockquote {
   position: relative;
   margin: 0;
-  background: #6cbe0e;
+  background: #000000;
   border: 1px dashed #0735ee;
   padding: 22px 24px 24px;
   border-radius: 14px;
@@ -242,14 +261,14 @@ blockquote::before {
   border: 1px solid var(--line);
   padding: 22px;
   border-radius: 16px;
-  background: #fff;
+  background: #110a0a;
 }
 .cta .btn {
   --_bg: linear-gradient(90deg, var(--brand), var(--accent));
   padding: 12px 18px;
   border-radius: 999px;
-  color: white;
-  background: var(--_bg);
+  color: rgb(58, 27, 235);
+  background: black;
   text-decoration: none;
   font-weight: 600;
   box-shadow: 0 8px 18px rgba(43, 108, 176, 0.25);
@@ -268,5 +287,5 @@ blockquote::before {
 footer {
   padding: 26px;
   text-align: center;
-  color: #6b7280;
+  color: #ffffff;
 }
