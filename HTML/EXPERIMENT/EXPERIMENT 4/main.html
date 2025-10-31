@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+div{
+    border: 2px solid black;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    font-size: 30px;
+    
+    background-color: lightgrey;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Mobile-first */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.box {
+  background: lightblue;
+  padding: 2rem;
+  text-align: center;
+   
+   width: 700px;
+   height: 10px;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
+
+</style>
+<body>
+   
+    
+    
+    <div class="box">1</div>
+       <br>
+    <div class="box"> 2</div>
+    <br>
+    <div class="box">3</div>
+    <br>
+    <div class="box">4 </div>
+    <br>
+    <div class="box">5 </div>
+    <br>
+    <div class="box">6</div> 
+</body>
+</html>
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fliping card</title>
+    <style>
+       * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: #fff;
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+} 
+
+.card-image img {
+  width: 100%;
+  display: block;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-title {
+  color: #e63946;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-weight: bold;
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.buy-btn {
+  padding: 10px 20px;
+  background-color: #1d3557;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+
+
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-image">
+      <img src="https://redtape.com/cdn/shop/files/RLL0308A_1_14cd7d6d-cb2b-44cd-8fa7-7e5645e52645.jpg?v=1756809452" alt="Readtap Shoes">
+    </div>
+    <div class="card-content">
+      <h2 class="product-title">Readtap shoes</h2>
+      <p class="price">Price: $100</p>
+      <p class="description">Casual Sneaker Shoes For Women</p>
+      <button class="buy-btn">Buy Now</button>
+    </div>
+  </div>
+
+        <div class="flip-card-back">
+        <h3>Casual Sneaker Shoes For Women</h3>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+   
+</body>
+</html>

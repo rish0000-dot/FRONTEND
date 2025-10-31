@@ -121,6 +121,7 @@ p {
   opacity: 0.15;
 }
 
+
 .lead::first-letter {
   font-family: "Playfair Display", serif;
   font-size: 2rem;
@@ -170,8 +171,11 @@ ul.values li::marker {
   border-radius: 16px;
   background: linear-gradient(180deg, #3c7c99, #000000);
   border: 1px solid var(--line);
-  transition: transform 0.35s ease, box-shadow 0.35s ease,
-    border-color 0.35s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease,    border-color 0.35s ease;
+  -webkit-transition: transform 0.35s ease, box-shadow 0.35s ease,;
+  -moz-transition: transform 0.35s ease, box-shadow 0.35s ease,;
+  -ms-transition: transform 0.35s ease, box-shadow 0.35s ease,;
+  -o-transition: transform 0.35s ease, box-shadow 0.35s ease,;
 }
 /* Decorative corner ribbon (pseudo-element) */
 .member::before {
