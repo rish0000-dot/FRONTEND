@@ -4,4 +4,4 @@ age>=12 && age<=19 ? console.log("you are teen") :  console.log("you are not tee
 // }
 // else{
 //     console.log("you are not teen")
-// } or true ki value || && false ki value
+// } or true ki value || && false ki value                                              
