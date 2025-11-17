@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple To‑Do List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      padding-top: 40px;
+    }
+
+    .container {
+      background: white;
+      width: 350px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 { text-align: center; margin-top: 0; }
+
+    #taskInput {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    #addBtn {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    ul {
+      margin-top: 20px;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      background: #f9f9f9;
+      padding: 10px;
+      margin-bottom: 8px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .deleteBtn {
+      background: red;
+      color: white;
+      border: none;
+      padding: 5px 8px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Simple To‑Do List</h2>
+    <input id="taskInput" type="text" placeholder="Enter task..." />
+    <button id="addBtn">Add</button>
+    <ul id="taskList"></ul>
+  </div>
+
+  <script>
+    const input = document.getElementById("taskInput");
+    const addBtn = document.getElementById("addBtn");
+    const list = document.getElementById("taskList");
+
+    addBtn.addEventListener("click", addTask);
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") addTask();
+    });
+
+    function addTask() {
+      const text = input.value.trim();
+      if (!text) return;
+
+      const li = document.createElement("li");
+  
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.style.marginRight = "10px";
+
+    
+      const span = document.createElement("span");
+      span.textContent = text;
+
+      li.appendChild(checkbox);
+      li.appendChild(span);
+
+      const del = document.createElement("button");
+      del.textContent = "Delete";
+      del.className = "deleteBtn";
+      del.onclick = () => li.remove();
+
+    
+      checkbox.addEventListener("change", () => {
+        if (checkbox.checked) {
+          span.style.textDecoration = "line-through";
+          span.style.color = "gray";
+        } else {
+          span.style.textDecoration = "none";
+          span.style.color = "black";
+        }
+      });
+
+      li.appendChild(del);
+      list.appendChild(li);
+      input.value = "";
+    }
+  </script>
+</body>
+</html>

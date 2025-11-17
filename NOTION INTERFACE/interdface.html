@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Notes</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: white;
+    }
+
+    /* Header */
+    .header {
+      background: url('banner.jpg') no-repeat center/cover;
+      height: 250px;
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 40px;
+      font-weight: bold;
+      backdrop-filter: blur(4px);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    /* Page Wrapper */
+    .wrapper {
+      width: 90%;
+      margin: auto;
+      margin-top: -40px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card .text {
+      padding: 12px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <div class="header">
+    <h1>Frontend Notes</h1>
+  </div>
+
+  <!-- Page Content -->
+  <div class="wrapper">
+    <div class="section-title">📚 Content</div>
+
+    <!-- Cards Grid -->
+    <div class="grid">
+
+      <div class="card">
+        <img src="html.jpg" alt="HTML">
+        <div class="text">HTML</div>
+      </div>
+
+      <div class="card">
+        <img src="forms.jpg" alt="HTML Forms">
+        <div class="text">HTML Forms: Deep Dive</div>
+      </div>
+
+      <div class="card">
+        <img src="css.jpg" alt="CSS">
+        <div class="text">CSS Step by Step</div>
+      </div>
+
+      <div class="card">
+        <img src="bootstrap.jpg" alt="Bootstrap">
+        <div class="text">Complete Bootstrap Basics</div>
+      </div>
+
+      <div class="card">
+        <img src="js.jpg" alt="JavaScript">
+        <div class="text">Step 1: JavaScript</div>
+      </div>
+
+      <div class="card">
+        <img src="experiments.jpg" alt="Experiments">
+        <div class="text">Experiments</div>
+      </div>
+
+      <div class="card">
+        <img src="practice.jpg" alt="Practice">
+        <div class="text">Practice Tasks</div>
+      </div>
+
+      <div class="card">
+        <img src="es6.jpg" alt="ES6">
+        <div class="text">Modern JS & ES6 Features</div>
+      </div>
+
+      <div class="card">
+        <img src="roadmap.jpg" alt="Roadmap">
+        <div class="text">Full Stack Roadmap</div>
+      </div>
+
+    </div>
+  </div>
+  <script>
+    // Simple card click effect
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        alert('Opening: ' + card.innerText.trim());
+      });
+    });
+
+    // Header fade animation
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('.header');
+      header.style.opacity = 1 - window.scrollY / 300;
+    });
+  </script>
+</body>
+</html>
